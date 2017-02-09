@@ -28,6 +28,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -1100,6 +1101,7 @@ public class NewsFeedFgt extends Fragment implements ThemeManager.OnThemeChangeL
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * 广告滑动接口
@@ -1151,6 +1153,8 @@ public class NewsFeedFgt extends Fragment implements ThemeManager.OnThemeChangeL
                 return "查看详情";
         }
     }
+=======
+>>>>>>> parent of 2b7af77... update type
 =======
 >>>>>>> parent of 2b7af77... update type
 }
