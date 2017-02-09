@@ -28,7 +28,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -259,7 +258,6 @@ public class NewsFeedFgt extends Fragment implements ThemeManager.OnThemeChangeL
                 isListRefresh = true;
                 Logger.e("aaa", "刷新");
                 loadData(PULL_DOWN_REFRESH);
-                scrollAd();
             }
 
             @Override
@@ -267,7 +265,6 @@ public class NewsFeedFgt extends Fragment implements ThemeManager.OnThemeChangeL
                 isListRefresh = true;
                 Logger.e("aaa", "加载");
                 loadData(PULL_UP_REFRESH);
-                scrollAd();
             }
         });
         addHFView(LayoutInflater);
@@ -1076,7 +1073,7 @@ public class NewsFeedFgt extends Fragment implements ThemeManager.OnThemeChangeL
                 jsonObject.put("city", SharedPreManager.mInstance(mContext).get(CommonConstant.FILE_USER_LOCATION, CommonConstant.KEY_LOCATION_CITY));
                 jsonObject.put("area", SharedPreManager.mInstance(mContext).get(CommonConstant.FILE_USER_LOCATION, CommonConstant.KEY_LOCATION_ADDR));
                 /**
-                 * 1：奇点资讯， 2：黄历天气，3：纹字锁屏，4：猎鹰浏览器，5：白牌 6.纹字主题
+                 * 1：奇点资讯， 2：黄历天气，3：纹字锁屏，4：猎鹰浏览器，5：白牌
                  */
                 jsonObject.put("ctype", 3);
                 /**
@@ -1102,6 +1099,7 @@ public class NewsFeedFgt extends Fragment implements ThemeManager.OnThemeChangeL
             }
         }
     }
+<<<<<<< HEAD
 
     /**
      * 广告滑动接口
@@ -1153,4 +1151,6 @@ public class NewsFeedFgt extends Fragment implements ThemeManager.OnThemeChangeL
                 return "查看详情";
         }
     }
+=======
+>>>>>>> parent of 2b7af77... update type
 }
