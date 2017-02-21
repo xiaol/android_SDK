@@ -28,7 +28,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -1100,30 +1099,29 @@ public class NewsFeedFgt extends Fragment implements ThemeManager.OnThemeChangeL
             }
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
     /**
      * 广告滑动接口
      */
-    private void scrollAd() {
-        User user = SharedPreManager.mInstance(mContext).getUser(mContext);
-        if (user != null) {
-            int uid = user.getMuid();
-            //渠道类型, 1：奇点资讯， 2：黄历天气，3：纹字锁频，4：猎鹰浏览器，5：白牌 6:纹字主题
-            int ctype = 3;
-            //平台类型，1：IOS，2：安卓，3：网页，4：无法识别
-            int ptype = 2;
-            String requestUrl = HttpConstant.URL_SCROLL_AD + "?nid=" + uid + "&ctype=" + ctype + "&ptype=" + ptype;
-            RequestQueue requestQueue = QiDianApplication.getInstance().getRequestQueue();
-            StringRequest request = new StringRequest(Request.Method.GET, requestUrl, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                }
-            }, null);
-            requestQueue.add(request);
-        }
-    }
+//    private void scrollAd() {
+//        User user = SharedPreManager.mInstance(mContext).getUser(mContext);
+//        if (user != null) {
+//            int uid = user.getMuid();
+//            //渠道类型, 1：奇点资讯， 2：黄历天气，3：纹字锁频，4：猎鹰浏览器，5：白牌 6:纹字主题
+//            int ctype = 3;
+//            //平台类型，1：IOS，2：安卓，3：网页，4：无法识别
+//            int ptype = 2;
+//            String requestUrl = HttpConstant.URL_SCROLL_AD + "?nid=" + uid + "&ctype=" + ctype + "&ptype=" + ptype;
+//            RequestQueue requestQueue = QiDianApplication.getInstance().getRequestQueue();
+//            StringRequest request = new StringRequest(Request.Method.GET, requestUrl, new Response.Listener<String>() {
+//                @Override
+//                public void onResponse(String response) {
+//                }
+//            }, null);
+//            requestQueue.add(request);
+//        }
+//    }
 
     /**
      * App类广告安装、下载状态的更新（普链广告没有此状态，其值为-1） 返回的AppStatus含义如下： 0：未下载 1：已安装 2：已安装旧版本 4：下载中（可获取下载进度“0-100”）
@@ -1153,8 +1151,4 @@ public class NewsFeedFgt extends Fragment implements ThemeManager.OnThemeChangeL
                 return "查看详情";
         }
     }
-=======
->>>>>>> parent of 2b7af77... update type
-=======
->>>>>>> parent of 2b7af77... update type
 }
